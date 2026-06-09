@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Privacidad Digital</title>
+
+<link rel="stylesheet" href="estilos.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#4A90E2">
+</head>
+
+<body>
+
+<!-- TUTORIAL INICIAL -->
+
+<div id="overlay" class="overlay">
+
+```
+<div class="tutorial-box">
+
+    <h2>Bienvenido</h2>
+
+    <p id="tutorialText">
+        Esta aplicación te ayudará a proteger tus datos personales.
+    </p>
+
+    <button id="btnSiguienteTutorial">
+        Siguiente
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- ENCABEZADO -->
+
+<header>
+
+```
+<h1>🛡️ Mi Privacidad Digital</h1>
+
+<p>
+    Aprende a proteger tu información y administrar los permisos de tus aplicaciones.
+</p>
+```
+
+</header>
+
+<!-- SELECCIÓN DE PERFIL -->
+
+<section id="perfilSection">
+
+```
+<h2>¿Quién utilizará la aplicación?</h2>
+
+<div class="perfil-container">
+
+    <button id="adultoBtn" class="perfil-btn">
+        👵 Adulto Mayor
+    </button>
+
+    <button id="menorBtn" class="perfil-btn">
+        🧒 Menor de Edad
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- MENÚ PRINCIPAL -->
+
+<section id="menuPrincipal" class="oculto">
+
+```
+<nav>
+
+    <button onclick="mostrarSeccion('inicio')">
+        🏠 Inicio
+    </button>
+
+    <button onclick="mostrarSeccion('lecciones')">
+        📚 Lecciones
+    </button>
+
+    <button onclick="mostrarSeccion('tutoriales')">
+        🎓 Tutoriales
+    </button>
+
+    <button onclick="mostrarSeccion('permisos')">
+        🔒 Permisos
+    </button>
+
+    <button onclick="mostrarSeccion('recomendaciones')">
+        💡 Consejos
+    </button>
+
+    <button onclick="mostrarSeccion('progreso')">
+        📈 Progreso
+    </button>
+
+</nav>
+
+<div style="text-align:center;margin:15px;">
+
+    <button onclick="cambiarPerfil()" class="cerrar-sesion">
+        🚪 Cambiar Perfil
+    </button>
+
+</div>
+
+<!-- INICIO -->
+
+<div id="inicio" class="contenido">
+
+    <h2 id="saludoUsuario">
+        Bienvenido
+    </h2>
+
+    <p>
+        La ciudadanía digital consiste en usar Internet y la tecnología de manera responsable y segura.
+    </p>
+
+</div>
+
+<!-- LECCIONES -->
+
+<div id="lecciones" class="contenido oculto">
+
+    <h2>📚 Lecciones</h2>
+
+    <div class="card">
+
+        <h3>¿Qué son los datos personales?</h3>
+
+        <p>
+            Son datos que identifican a una persona: nombre, dirección,
+            teléfono, correo electrónico y fotografías.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Derechos Digitales</h3>
+
+        <p>
+            Tienes derecho a decidir quién puede acceder a tu información.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Responsabilidades</h3>
+
+        <p>
+            Debes revisar periódicamente la privacidad de tus aplicaciones.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- TUTORIALES -->
+
+<div id="tutoriales" class="contenido oculto">
+
+    <h2>🎓 Tutoriales de Ciudadanía Digital</h2>
+
+    <div id="contenidoTutoriales">
+
+    </div>
+
+</div>
+
+<!-- PERMISOS -->
+
+<div id="permisos" class="contenido oculto">
+
+    <h2>🔒 Revisión de Permisos</h2>
+
+    <div class="card">
+
+        <h3>📷 Cámara</h3>
+
+        <p>
+            1. Abre Configuración.<br>
+            2. Selecciona Privacidad.<br>
+            3. Ingresa a Cámara.<br>
+            4. Revisa qué aplicaciones tienen acceso.
+        </p>
+
+        <button onclick="registrarRevision('camara')">
+            Marcar como revisado
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🎤 Micrófono</h3>
+
+        <p>
+            1. Abre Configuración.<br>
+            2. Selecciona Privacidad.<br>
+            3. Ingresa a Micrófono.<br>
+            4. Revisa qué aplicaciones tienen acceso.
+        </p>
+
+        <button onclick="registrarRevision('microfono')">
+            Marcar como revisado
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>📍 Ubicación</h3>
+
+        <p>
+            1. Abre Configuración.<br>
+            2. Selecciona Privacidad.<br>
+            3. Ingresa a Ubicación.<br>
+            4. Revisa qué aplicaciones tienen acceso.
+        </p>
+
+        <button onclick="registrarRevision('ubicacion')">
+            Marcar como revisado
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CONSEJOS -->
+
+<div id="recomendaciones" class="contenido oculto">
+
+    <h2>💡 Consejos de Seguridad</h2>
+
+    <ul>
+
+        <li>No compartas contraseñas.</li>
+        <li>No compartas códigos de verificación.</li>
+        <li>Utiliza contraseñas seguras.</li>
+        <li>Mantén actualizado tu dispositivo.</li>
+        <li>Revisa permisos cada tres meses.</li>
+        <li>Evita abrir enlaces sospechosos.</li>
+
+    </ul>
+
+</div>
+
+<!-- PROGRESO -->
+
+<div id="progreso" class="contenido oculto">
+
+    <h2>📈 Mi Progreso</h2>
+
+    <div class="card">
+
+        <p>
+            Cámara revisada:
+            <span id="estadoCamara">Pendiente</span>
+        </p>
+
+        <p>
+            Micrófono revisado:
+            <span id="estadoMicrofono">Pendiente</span>
+        </p>
+
+        <p>
+            Ubicación revisada:
+            <span id="estadoUbicacion">Pendiente</span>
+        </p>
+
+        <p>
+            Última revisión:
+            <span id="ultimaRevision">Sin registros</span>
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
