@@ -200,24 +200,16 @@ cargarPerfilGuardado();
 
 function mostrarSeccion(id){
 
-const secciones =
-document.querySelectorAll(
-".contenido"
-);
+    const secciones =
+    document.querySelectorAll(".contenido");
 
-secciones.forEach(sec=>{
+    secciones.forEach(sec => {
+        sec.classList.add("oculto");
+    });
 
-sec.classList.add(
-"oculto"
-);
-
-});
-
-document
-.getElementById(id)
-.classList.remove(
-"oculto"
-);
+    document
+    .getElementById(id)
+    .classList.remove("oculto");
 
 }
 
@@ -543,6 +535,40 @@ function cargarTutoriales(){
 }
 
 // ============================
+// ABRIR GUÍAS DE PRIVACIDAD
+// ============================
+
+function abrirCamara(){
+
+    alert(
+    "📷 Cámara\n\nAndroid:\nConfiguración > Privacidad > Administrador de permisos > Cámara\n\niPhone:\nAjustes > Privacidad y seguridad > Cámara"
+    );
+
+    registrarRevision("camara");
+
+}
+
+function abrirMicrofono(){
+
+    alert(
+    "🎤 Micrófono\n\nAndroid:\nConfiguración > Privacidad > Administrador de permisos > Micrófono\n\niPhone:\nAjustes > Privacidad y seguridad > Micrófono"
+    );
+
+    registrarRevision("microfono");
+
+}
+
+function abrirUbicacion(){
+
+    alert(
+    "📍 Ubicación\n\nAndroid:\nConfiguración > Ubicación > Permisos de aplicaciones\n\niPhone:\nAjustes > Privacidad y seguridad > Localización"
+    );
+
+    registrarRevision("ubicacion");
+
+}
+
+// ============================
 // SERVICE WORKER
 // ============================
 
@@ -558,5 +584,17 @@ navigator.serviceWorker.register(
 
 }
 );
+
+}
+function abrirCamara(){
+
+    alert(
+    "Ve a:\n\nConfiguración > Privacidad > Cámara"
+    );
+
+    window.open(
+    "app-settings:",
+    "_blank"
+    );
 
 }

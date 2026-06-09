@@ -248,3 +248,7 @@ video{
     border-radius:15px;
     margin-top:10px;
 }
+
+.oculto{
+    display:none;
+}

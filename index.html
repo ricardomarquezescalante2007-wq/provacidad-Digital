@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,6 @@
 
 <div id="overlay" class="overlay">
 
-```
 <div class="tutorial-box">
 
     <h2>Bienvenido</h2>
@@ -33,7 +33,7 @@
     </button>
 
 </div>
-```
+
 
 </div>
 
@@ -41,21 +41,21 @@
 
 <header>
 
-```
+
 <h1>🛡️ Mi Privacidad Digital</h1>
 
 <p>
     Aprende a proteger tu información y administrar los permisos de tus aplicaciones.
 </p>
-```
+
 
 </header>
 
-<!-- SELECCIÓN DE PERFIL -->
+<!-- PERFIL -->
 
 <section id="perfilSection">
 
-```
+
 <h2>¿Quién utilizará la aplicación?</h2>
 
 <div class="perfil-container">
@@ -69,15 +69,15 @@
     </button>
 
 </div>
-```
+
 
 </section>
 
-<!-- MENÚ PRINCIPAL -->
+<!-- MENÚ -->
 
 <section id="menuPrincipal" class="oculto">
 
-```
+
 <nav>
 
     <button onclick="mostrarSeccion('inicio')">
@@ -139,8 +139,7 @@
         <h3>¿Qué son los datos personales?</h3>
 
         <p>
-            Son datos que identifican a una persona: nombre, dirección,
-            teléfono, correo electrónico y fotografías.
+            Son datos que identifican a una persona: nombre, dirección, teléfono, correo electrónico y fotografías.
         </p>
 
     </div>
@@ -173,9 +172,7 @@
 
     <h2>🎓 Tutoriales de Ciudadanía Digital</h2>
 
-    <div id="contenidoTutoriales">
-
-    </div>
+    <div id="contenidoTutoriales"></div>
 
 </div>
 
@@ -190,14 +187,11 @@
         <h3>📷 Cámara</h3>
 
         <p>
-            1. Abre Configuración.<br>
-            2. Selecciona Privacidad.<br>
-            3. Ingresa a Cámara.<br>
-            4. Revisa qué aplicaciones tienen acceso.
+            Revisa qué aplicaciones tienen acceso a tu cámara.
         </p>
 
-        <button onclick="registrarRevision('camara')">
-            Marcar como revisado
+        <button onclick="abrirCamara()">
+            📷 Revisar Cámara
         </button>
 
     </div>
@@ -207,14 +201,11 @@
         <h3>🎤 Micrófono</h3>
 
         <p>
-            1. Abre Configuración.<br>
-            2. Selecciona Privacidad.<br>
-            3. Ingresa a Micrófono.<br>
-            4. Revisa qué aplicaciones tienen acceso.
+            Revisa qué aplicaciones tienen acceso a tu micrófono.
         </p>
 
-        <button onclick="registrarRevision('microfono')">
-            Marcar como revisado
+        <button onclick="abrirMicrofono()">
+            🎤 Revisar Micrófono
         </button>
 
     </div>
@@ -224,14 +215,11 @@
         <h3>📍 Ubicación</h3>
 
         <p>
-            1. Abre Configuración.<br>
-            2. Selecciona Privacidad.<br>
-            3. Ingresa a Ubicación.<br>
-            4. Revisa qué aplicaciones tienen acceso.
+            Revisa qué aplicaciones tienen acceso a tu ubicación.
         </p>
 
-        <button onclick="registrarRevision('ubicacion')">
-            Marcar como revisado
+        <button onclick="abrirUbicacion()">
+            📍 Revisar Ubicación
         </button>
 
     </div>
@@ -288,7 +276,7 @@
     </div>
 
 </div>
-```
+
 
 </section>
 
